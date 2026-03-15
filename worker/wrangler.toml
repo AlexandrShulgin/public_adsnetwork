@@ -1,0 +1,21 @@
+name = "trend-ads-engine"
+main = "index.ts"
+compatibility_date = "2024-04-03"
+compatibility_flags = ["nodejs_compat"]
+
+[[durable_objects.bindings]]
+name = "AUCTION_ENGINE_SELF"
+class_name = "AuctionEngine"
+
+[[durable_objects.bindings]]
+name = "BUDGET_AUTHORITY_SELF"
+class_name = "BudgetAuthority"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["AuctionEngine", "BudgetAuthority"]
+
+[vars]
+# Supabase credentials will be added via secrets, but placeholders help for dev
+# SUPABASE_URL = ""
+# SUPABASE_ANON_KEY = ""
